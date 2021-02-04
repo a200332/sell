@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.193.131/sell?characterEncoding=utf-8&useSSL=false
+  #    url: jdbc:mysql://192.168.43.196/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null # \u8BA9\u503C\u4E3ANULL\u7684\u975E\u5FC5\u987B\u5C5E\u6027\u4E0D\u8FD4\u56DE
+  redis:
+    host: 192.168.193.131
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+
+wechat:
+  mpAppId: wx70f5347b042a4093
+  mpAppSecret: d567db17cc9587ef9494c63062397afe
+  mchId: 1603257808
+  mchKey: denixinnigudcomtiku666nihkyaa123
+  notifyUrl: http://bxb.mynatapp.cc/sell/pay/notify
+
+projecturl:
+  wechatMpAuthorize: http://bxb.mynatapp.cc
+  wechatOpenAuthorize: http://bxb.mynatapp.cc
+  sell: http://bxb.mynatapp.cc
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
